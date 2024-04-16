@@ -1,0 +1,97 @@
+.part1{
+  text-align: center ;
+background-color: #B3BBBC;
+color: #23414B;
+
+}
+
+.part2{
+  
+  background-color: #23414B;
+  display: flex;
+ 
+  color:#ffffff;
+ 
+  
+  }
+
+ul{
+list-style: none;
+padding: 0;
+font-family: 'Poppins';
+
+
+}
+
+li{
+
+  margin-bottom: 5px;
+  text-align: left;
+  padding-right: -30px;
+
+}
+
+.titles{
+  font-weight: 700;
+  font-size: larger;
+  margin-bottom: 16px;
+  margin-top: 10px;
+  width: 170px;
+
+
+
+}
+
+
+.accountbutton{
+background-color:#DFB4A3 ;
+padding-top: 10px;
+padding-bottom: 10px;
+height: 40px ;
+width: 190px;
+border-radius:25px ;
+border-color: #23414B;
+border-width: 0.5px;
+cursor: pointer;
+font-family: Roboto;
+font-style: normal;
+font-weight: 700;
+margin-top: 29px;
+margin-bottom:69px ;
+color: #23414B;
+}
+
+
+
+h3{
+padding-top: 69px;
+
+
+}
+ 
+.list{
+
+margin-left: 40px;
+margin-right: 57px;
+font-family:Regular ;
+font-weight: 100;
+padding: 0;
+}
+.logo2 {
+  width: 80px;
+  height: 90px;
+  margin-right: 20px;
+  margin-left: -280px;
+
+}
+.endinfo{
+  margin-bottom: 25px;
+}
+.underlogo{
+  font-family: 'Poppins';
+ margin-right: -123px;
+ margin-left: -59px;
+ margin-top: 15px;
+ padding-right: 47px;
+ padding-left:15px ;
+}
