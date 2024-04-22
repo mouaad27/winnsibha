@@ -108,9 +108,9 @@
   
   .product-image {
     width: 100%;
-    height: 200px;
+    height: 260px;
     object-fit: contain;
-    margin-bottom: -15px;
+    margin-bottom: -45px;
     margin-top: 18px;
   }
   
@@ -182,6 +182,8 @@
 }
 .imagedesc{
   display: flex;
+  
+  margin-bottom: 250px;
 }
 .product-desc{
   margin-top: 50px;
@@ -244,6 +246,7 @@
   width: 310px;
   margin: 10px;
   height: 90px;
+  
   
   
   

@@ -1,6 +1,12 @@
 import { FaHeart } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
+import {Image} from "@nextui-org/react";
+import {Badge, Button} from "@nextui-org/react";
+import "../index.css";
+
 
 const Navbar = () => {
+ 
     return ( 
         <nav className="Navbar">
           <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'></link>
@@ -9,7 +15,7 @@ const Navbar = () => {
                 <a href="/" className="sa">home</a>
                 <a href="/" className="sa">products</a>
                 <a href="/" className="sa">services</a>
-                <a href="/" className="sa">sign up</a>
+                <NavLink to="/Singup" className={"sa hover:bg-red-500"}>sign up</NavLink>
                 </div>
                <div className="likeser">
                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"></link>
@@ -20,11 +26,17 @@ const Navbar = () => {
   <a href="javascript:void(0)" id="clear-btn"></a>
 </form>
 
-<button class="heart-btn">
-  <FaHeart />
+<Badge content="95+" shape="circle" color="red" className="mr-10" >
+      <Button
+        radius="full"
+        isIconOnly
+        aria-label="more than 99 notifications"
+        variant="light"
+      >
+        <FaHeart size={24} color="white" />
+      </Button>
+    </Badge>
 
-  
-</button>
                </div>
                
         </nav> 

@@ -1,5 +1,5 @@
 .contact-info{
-    height: 460px;
+    height: 490px;
     width: 250px;
     background-color: #e5ddd2;
     margin: 7px;
@@ -8,7 +8,7 @@
 }
 .contact-form{
     background-color: #e5ddd2;
-    height: 460px;
+    height: 490px;
     width: 800px;
     margin: 7px;
     border-radius: 23px;
@@ -17,7 +17,7 @@
 .contact-box{
     display: flex;
     justify-content: center;
-    margin-top: 230px;
+    margin-top: 270px;
     margin-bottom: 270px;
     
     
@@ -39,4 +39,8 @@
     border-radius: 4px;
     background-color: #d0cece;
     border: 2px solid gray;
+    vertical-align: top;
+    padding-bottom: 210px;
+    padding-left: 6px;
 }
+

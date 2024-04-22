@@ -46,15 +46,20 @@ const Showproduct = () => {
             <div className="product-desc">
             <p>{productname}</p>
             </div>
-            <div className="product-location">
-            <p><BiMap />&nbsp;&nbsp;{location}</p>
+            <div className="product-location flex">
+            <div className=' mr-4'><BiMap /></div>
+            <div><p>{location}</p></div>
             </div>
             <div className="product-Reviews">
             <p>PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
 
             </div>
-            <div className="product-stars">
-            <p><AiFillStar className='star'/><AiFillStar className='star'/><AiFillStar className='star'/><AiFillStar className='star'/><AiFillStar className='star'/> (150 Reviews)</p>
+            <div className="product-stars ">
+            <div className='flex gap-2 items-center'><AiFillStar className='star'/>
+            <AiFillStar className='star'/>
+            <AiFillStar className='star'/>
+            <AiFillStar className='star'/>
+             <AiFillStar className='star'/> (150 Reviews)</div>
 
             </div>
             <div className="reserve">
@@ -68,7 +73,15 @@ const Showproduct = () => {
 
         </div>
         </div>
-        
+        <div className='w-full h-80 bg-[#4D6A77] flex '>
+           <div> <img src='/prof.jpg ' className=' h-56 w-56 rounded-full mt-16 ml-28'></img></div>
+           <div className=' mt-24 ml-20'><p className='mb-16'>name</p>
+                 <p> location</p>  
+                 <p> disc</p>                 
+           </div>
+
+
+        </div>
         </div>
      );
 }
