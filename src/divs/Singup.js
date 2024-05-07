@@ -126,39 +126,47 @@ const Singup = () => {
           </div>
         </div>
       </div>
+      <div className=""> 
+      <h3>Your Reservation Form</h3>
 
-      <div className=" bg-slate-400 mr-20 ml-20">
-        <div className="flex justify-between mr-20  ml-20 mb-36">
-          {" "}
-          <div>
-            <p className="input-name text-left">email</p>
-            <input type="email" className="text-sign1 mb-4 bg-white" />{" "}
-          </div>
-          <div>
-            <p className="input-name text-left">email</p>
-            <input type="email" className="text-sign1 mb-4 bg-white" />{" "}
-          </div>
-        </div>
-        <div className="flex justify-between mr-20  ml-20 mb-36">
-          <div>
-            <p className="input-name text-left">email</p>
-            <input type="email" className="text-sign1 mb-4 bg-white" />{" "}
-          </div>
-          <div>
-            <p className="input-name text-left">email</p>
-            <input type="email" className="text-sign1 mb-4 bg-white" />{" "}
-          </div>
-        </div>
-        <div className="flex justify-between mr-20  ml-20 mb-36">
-          <div>
-            <p className="input-name text-left">email</p>
-            <input type="email" className="text-sign1 mb-4 bg-white" />{" "}
-          </div>
-          <div>
-            <p className="input-name text-left">email</p>
-            <input type="email" className="text-sign1 mb-4 bg-white" />{" "}
-          </div>
-        </div>
+<div className="bg-gray-400 mx-20 rounded-lg p-8">
+  <div className="flex justify-between mb-8">
+    <div className="w-1/2 mr-4">
+      <label htmlFor="firstName" className="input-name block mb-2 text-black">First Name</label>
+      <input id="firstName" type="text" placeholder="John" className="text-sign1 input-field w-full bg-white rounded border border-gray-400 py-2 px-3 focus:outline-none focus:border-blue-500" />
+    </div>
+    <div className="w-1/2 ml-4 text-right">
+      <label htmlFor="lastName" className="input-name block mb-2 text-white">Last Name</label>
+      <input id="lastName" type="text" placeholder="Doe" className="text-sign1 input-field w-full bg-white rounded border border-gray-400 py-2 px-3 focus:outline-none focus:border-blue-500" />
+    </div>
+  </div>
+  <div className="flex justify-between mb-8">
+    <div className="w-1/2 mr-4">
+      <label htmlFor="wilaya" className="input-name block mb-2 text-white">Wilaya</label>
+      <input id="wilaya" type="text" placeholder="Algiers" className="text-sign1 input-field w-full bg-white rounded border border-gray-400 py-2 px-3 focus:outline-none focus:border-blue-500" />
+    </div>
+    <div className="w-1/2 ml-4 text-right">
+      <label htmlFor="commune" className="input-name block mb-2 text-white">Commune</label>
+      <input id="commune" type="text" placeholder="Bab El Oued" className="text-sign1 input-field w-full bg-white rounded border border-gray-400 py-2 px-3 focus:outline-none focus:border-blue-500" />
+    </div>
+  </div>
+  <div className="flex justify-between mb-8">
+    <div className="w-1/2 mr-4">
+      <label htmlFor="productNumber" className="input-name block mb-2 text-white">N° of product</label>
+      <input id="productNumber" type="number" placeholder="5" className="text-sign1 input-field w-full bg-white rounded border border-gray-400 py-2 px-3 focus:outline-none focus:border-blue-500" />
+    </div>
+    <div className="w-1/2 ml-4 text-right">
+      <label htmlFor="phoneNumber" className="input-name block mb-2 text-white">Phone Number</label>
+      <input id="phoneNumber" type="tel" placeholder="123456789" className="text-sign1 input-field w-full bg-white rounded border border-gray-400 py-2 px-3 focus:outline-none focus:border-blue-500" />
+    </div>
+  </div>
+  <h2>the owner will contact u soo n</h2>
+  <div className="flex justify-center">
+    <button type="submit" className="continue-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Confirm</button>
+  </div>
+</div>
+
+
       </div>
       <div class="max-w-md mx-auto py-6 px-4shadow-md rounded-md">
         <h2 class="text-2xl font-semibold mb-4">User Registration Form</h2>
