@@ -21,64 +21,20 @@ import {
 import Signin from "../divs/Signin";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import React, { useState } from "react";
-import {
-    useCookies,
-    cookies,
-    setCookie,
-    removeCookie
-} from 'react-cookie';
 
 const Singup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
   const [showPassword1, setShowPassword1] = useState(false);
   const [password1, setPassword1] = useState("");
-  const [cookies, setCookie, removeCookie] = useCookies(['user']);
-
 
   const togglePasswordVisibility1 = () => {
     setShowPassword1(!showPassword1);
   };
-
-  let handleSubmit = async () => {
-    let data = {
-      email: email,
-      password: password,
-    };
-    let result =  await fetch(
-      "http://127.0.0.1:8000/api/register",
-
-      {
-        method: "POST", // *GET, POST, PUT, DELETE, etc
-        body: JSON.stringify(data), // body data type must match "Content-Type" header
-        mode:"cors",
-        headers: {
-          // "Content-Type": "application/json",
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    result = await result.json();
-    console.log(result)
-    let accessToken  =   result['access_token'];
-    let refreshToken =  result['refresh_token'];
-    setCookie("access_token",accessToken);
-    setCookie("refresh_token",refreshToken);
-    
-    if(result.status == 201){
-      console.log("user Created Succesfully ");
-    }
-   else{
-     console.log('sorry');
-   } 
-  };  
   return (
     <div className="sign">
       <Navbar></Navbar>
@@ -128,8 +84,6 @@ const Singup = () => {
               <input
                 type="email"
                 className="text-sign mb-4  bg-[#ede5dc] rounded-[2px]"
-              value={email}
-              onChange={(e)=>setEmail(e.target.value)}
               />{" "}
             </div>
             <div className="mb-4">
@@ -165,13 +119,21 @@ const Singup = () => {
           </div>
           <div>
             <div className="cont-button">
-              <button type="submit" className="continue-button" onClick={()=>handleSubmit()}>
+              <button type="submit" className="continue-button">
                 continue
               </button>
             </div>
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -299,10 +261,187 @@ const Singup = () => {
 
         
     </div>
-    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       
+      <div class="max-w-md mx-auto py-6 px-4shadow-md rounded-md">
+        <h2 class="text-2xl font-semibold mb-4">User Registration Form</h2>
+        <div className=" bg-slate-50 h-96 w-full">
+          <div className="flex">
+            <div class="mb-4">
+              <label
+                for="firstName"
+                class="block text-sm font-medium text-gray-700"
+              >
+                First Name:
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="lastName"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Last Name:
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+              />
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label
+              for="userName"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Username:
+            </label>
+            <input
+              type="text"
+              id="userName"
+              name="userName"
+              class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+            />
+          </div>
+
+          <div className="flex">
+            <div class="mb-4">
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Email Address:
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="phone"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Phone Number:
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+              />
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label
+              for="location"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Location:
+            </label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+            />
+          </div>
+
+          <div className="flex">
+            <div class="mb-4">
+              <label
+                for="currentPassword"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Current Password:
+              </label>
+              <input
+                type="password"
+                id="currentPassword"
+                name="currentPassword"
+                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+              />
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="newPassword"
+                class="block text-sm font-medium text-gray-700"
+              >
+                New Password:
+              </label>
+              <input
+                type="password"
+                id="newPassword"
+                name="newPassword"
+                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+              />
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label
+              for="confirmPassword"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Confirm Password:
+            </label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
