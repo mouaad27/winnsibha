@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../divs/Navbar.js";
+import Footer from "../divs/Footer.js";
 import { useParams } from "react-router-dom";
 import Landingpage from "../Landingpage.js";
 import { BiMap } from "react-icons/bi";
@@ -7,7 +8,17 @@ import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import { FaHeart } from "react-icons/fa6";
 import { AiFillStar } from "react-icons/ai";
-
+import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { IoIosSquare } from "react-icons/io";
+import Slider from "react-slick";
+import {
+  BrowserRouter,
+  Router,
+  Route,
+  Link,
+  NavLink,
+  Routes,
+} from "react-router-dom";
 const Showproduct = () => {
   const { images1, images2, productname, location } = useParams();
 
@@ -16,9 +27,31 @@ const Showproduct = () => {
   const changeImg = (src) => {
     setBigImgSrc(src);
   };
+  const list = [
+    {
+      title: "Orange",
+      img: "/5.jpg",
+      price: "$5.50",
+    },
+    {
+      title: "Tangerine",
+      img: "/5.jpg",
+      price: "$3.00",
+    },
+    {
+      title: "Raspberry",
+      img: "/5.jpg",
+      price: "$10.00",
+    },
+    {
+      title: "Lemon",
+      img: "/5.jpg",
+      price: "$5.30",
+    },
+  ];
 
   return (
-    <div className="Showproduct">
+    <div className="Showproduct bg-[#23414B]">
       <link
         href="https://fonts.googleapis.com/css?family=Inter"
         rel="stylesheet"
@@ -28,7 +61,7 @@ const Showproduct = () => {
         rel="stylesheet"
       ></link>
       <div className="nav-pr">
-        <Navbar> </Navbar>
+      <Navbar color="" > </Navbar>
       </div>
       <div className="imagedesc">
         <div className="imagecontainer">
@@ -97,9 +130,11 @@ const Showproduct = () => {
             </div>
           </div>
           <div className="reserve">
-            <AwesomeButton className="resvbut" type="primary">
+          <NavLink to={`/Register`}><AwesomeButton className="resvbut" type="primary">
               reserve
             </AwesomeButton>
+        </NavLink>
+            
             <span class="button-space"> </span>
             <AwesomeButton className="likebut" type="primary">
               {" "}
@@ -108,7 +143,11 @@ const Showproduct = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-80 bg-[#658899] flex ">
+      <div className="text-left mb-12 flex flex-row "> 
+         <div className=" align-middle mt-3 text-[#E5DDD2] ml-20"><IoIosSquare /></div><div><p className=" text-3xl font ml-2 text-[#E5DDD2] font-semibold">Contact the owner</p></div>
+      </div>
+      <div className="flex justify-center">
+      <div className="w-full h-80  bg-[#4D6A77] flex  ">
         <div>
           {" "}
           <img
@@ -122,7 +161,43 @@ const Showproduct = () => {
           <p> Email</p>
         </div>
       </div>
+      </div>
+      <div className=" ">
+      <div className="text-left flex mt-36"> 
+        <div className=" align-middle mt-3 text-[#E5DDD2] ml-20"><IoIosSquare /></div><div><p className=" text-3xl font ml-2 text-[#E5DDD2] font-semibold">You may also like</p></div>
+      </div>
+      <div className="flex justify-center mb-36">
+        <div className="gap-2 grid grid-cols-2 sm:grid-cols-4 w-10/12 mt-20 ">
+          {list.map((item, index) => (
+            <Card
+              className=" mx-5"
+              shadow="sm"
+              key={index}
+              isPressable
+              onPress={() => console.log("item pressed")}
+            >
+              <CardBody className="overflow-visible p-0">
+                <Image
+                  shadow="sm"
+                  radius="lg"
+                  width="100%"
+                  alt={item.title}
+                  className="w-full object-cover h-[280px]"
+                  src={item.img}
+                />
+              </CardBody>
+              <CardFooter className="text-small justify-between">
+                <b>{item.title}</b>
+                <p className="text-default-500">{item.price}</p>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </div>
     </div>
+    <Footer></Footer>
+    </div>
+    
   );
 };
 

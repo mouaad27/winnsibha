@@ -3,7 +3,8 @@ import { BsTelephone } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 const ContactUs = () => {
   return (
-    <div className="contact-box mt-96 ">
+    <div className="contact-box mt-16 ">
+     
       <div className="contact-info w-96 ">
         <span className="coninfo font-bold flex font-extrabold text-xl">
           <div className="text-2xl bg-[#c5cecf] p-2 rounded-full">
@@ -12,7 +13,7 @@ const ContactUs = () => {
           <div className=" ml-7">WRITE TO US</div>
         </span>
         <p className="a11 px-10">We are available 24/7, 7 days a week.</p>
-
+  
         <br></br>
         <br></br>
         <br></br>
@@ -36,7 +37,7 @@ const ContactUs = () => {
         <br></br>
       </div>
 
-      <div className="contact-form mt-5 ml-7">
+      <div className="contact-form mt-2 ml-7">
         <div>
           {" "}
           <input
@@ -76,3 +77,5 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+

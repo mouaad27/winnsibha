@@ -2,6 +2,14 @@ import React from "react";
 import { TiSocialFacebook } from "react-icons/ti";
 import { IoLogoTwitter } from "react-icons/io";
 import { FiInstagram } from "react-icons/fi";
+import {
+  BrowserRouter,
+  Router,
+  Route,
+  Link,
+  NavLink,
+  Routes,
+} from "react-router-dom";
 
 
 const Footer = () => {
@@ -22,33 +30,37 @@ const Footer = () => {
           href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
           rel="stylesheet"
         ></link>
-        <h3 className="py-8">
+        <div className="mt-10">
+        <h3 className="pb-5 pt-10 font-semibold ">
           Do you want to expose your Products or services?
         </h3>
-        <button className="accountbutton" onClick={handleClick}>
+        </div>
+        <NavLink to={`/Register`}><button className="accountbutton" onClick={handleClick}>
           CREATE AN ACCOUNT
         </button>
+        </NavLink>
       </div>
 
-      <div className="part2 bg-gray-900 flex text-white">
+      <div className="part2 bg-gray-900 flex text-white pt-8">
+        
         <div className="list ">
           <div className=" w-full">
             <img
-              className="logo2 w-24 h-24 ml-8 mt-5"
+              className="logo2 w-24 h-24 ml-4 mt-5"
               src="/22.png"
               alt="winnsibha"
             />
           </div>
           <div className=" text-left">
-            <p className="underlogo pl-14 pr-10 mt-1">
+            <p className="underlogo pl-8 pr-10 mt-1">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC.
             </p>
           </div>
-          <div className="flex justify-between mt-10 w-2/12">
-            <TiSocialFacebook />
-            <IoLogoTwitter />
-            <FiInstagram />
+          <div className="flex justify-between mt-7 w-3/12 ml-8 text-2xl">
+            <a href="https://www.facebook.com/groups/533642211092349" className=" rounded-full"><TiSocialFacebook /></a>
+            <a  href="https://www.instagram.com/win_nsibha_mostaganem/" className=" rounded-full"><IoLogoTwitter /></a>
+            <a  href="https://twitter.com/Cobratate" className=" rounded-lg"><FiInstagram /></a>
 
           </div>
         </div>
@@ -83,6 +95,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

@@ -1,6 +1,7 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
+import React, { useState, useEffect, createContext, useContext } from "react";
 import { Card, CardBody, CardFooter } from "@nextui-org/react";
 import Navbar from "./Navbar";
+import { IoIosSquare } from "react-icons/io";
 
 // Create a context to hold the count value
 const CountContext = createContext();
@@ -9,54 +10,53 @@ const CountContext = createContext();
 export const useCount = () => useContext(CountContext);
 
 const Fav = () => {
-    const list = [
-        
-        {
-          title: "Tangerine",
-          img: "6.jpg",
-          price: "$3.00",
-        },
-        {
-          title: "Raspberry",
-          img: "5.jpg",
-          price: "$10.00",
-        },
-        {
-          title: "Lemon",
-          img: "6.jpg",
-          price: "$5.30",
-        },
-        {
-          title: "Avocado",
-          img: "5.jpg",
-          price: "$15.70",
-        },
-        {
-          title: "Lemon 2",
-          img: "6.jpg",
-          price: "$8.00",
-        },
-        {
-          title: "Banana",
-          img: "5.jpg",
-          price: "$7.50",
-        },
-        {
-          title: "Watermelon",
-          img: "6.jpg",
-          price: "$12.20",
-        },
-        {
-          title: "Banana",
-          img: "5.jpg",
-          price: "$7.50",
-        },
-        {
-          title: "Watermelon",
-          img: "6.jpg",
-          price: "$12.20",
-        },
-      ];
+  const list = [
+    {
+      title: "TSHIRT",
+      img: "6.jpg",
+      price: "",
+    },
+    {
+      title: "Raspberry",
+      img: "5.jpg",
+      price: "",
+    },
+    {
+      title: "Lemon",
+      img: "6.jpg",
+      price: "",
+    },
+    {
+      title: "Avocado",
+      img: "5.jpg",
+      price: "",
+    },
+    {
+      title: "Lemon 2",
+      img: "6.jpg",
+      price: "",
+    },
+    {
+      title: "Banana",
+      img: "5.jpg",
+      price: "",
+    },
+    {
+      title: "Watermelon",
+      img: "6.jpg",
+      price: "",
+    },
+    {
+      title: "Banana",
+      img: "5.jpg",
+      price: "",
+    },
+    {
+      title: "Watermelon",
+      img: "6.jpg",
+      price: "",
+    },
+  ];
 
   const [count, setCount] = useState(list.length);
 
@@ -66,8 +66,18 @@ const Fav = () => {
 
   return (
     <CountContext.Provider value={count}>
-       <div>
+      <div>
         <Navbar />
+        <div className="flex ml-10 mt-20 mb-16">
+          <div className=" align-middle mt-3 text-[#23414B] ml-20">
+            <IoIosSquare />
+          </div>
+          <div>
+            <p className=" text-3xl font ml-2 text-[#23414B] font-semibold">
+              FAVOURITES LIST
+            </p>
+          </div>
+        </div>
         <div className="flex justify-center">
           <div className="gap-2 grid grid-cols-2 sm:grid-cols-4 w-10/12 ">
             {list.map((item, index) => (

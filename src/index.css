@@ -119,13 +119,15 @@ form:valid a {
 
 .hurt {
   height: 40px;
+  
   width: 40px;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .likeser {
   display: flex;
   align-items: center;
+  margin-right: 11px;
 }
 
 .bo {
@@ -134,8 +136,9 @@ form:valid a {
   height: 550px;
   padding: 5%;
   border-radius: 10px;
+
   margin: 3px;
-  background-image: url("jjj.jpg");
+ 
   background-size: cover; /* Use cover to ensure image covers the entire container */
 }
 
