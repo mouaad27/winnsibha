@@ -7,7 +7,25 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors : {
+                gry: "#B3BBBC",
+                pink: "#E4DCD1",
+                col : "#23414B",
+                pink2: "#DFB4A3",
+                gr:"#D1D5DB",
+                
+            },
+
+            fontFamily: {
+                'montserrat': ['Montserrat', 'sans-serif'],
+                'poppins': ['Poppins','sans-serif' ],
+            },
+
+
+
+
+        },
     },
     plugins: [],
     important: true,
