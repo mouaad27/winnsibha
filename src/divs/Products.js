@@ -105,7 +105,7 @@ const Products = () => {
     <div>
       <div className="mb-20">
         {" "}
-        <Navbar></Navbar>
+        
       </div>
       <div className="flex ml-10 mt-20 mb-16">
         <div className=" align-middle mt-3 text-[#23414B] ml-20">
@@ -121,7 +121,7 @@ const Products = () => {
         <div className="  w-11/12 h-[697px] flex justify-betweenm-3">
           <div className=" bg-red-500 w-3/5 h-6/6 m-3">
             <img
-              src="pro7.jpg"
+              src="Frame1.jpg"
               className="w-full h-full object-cover"
               alt="Product Image"
             />
@@ -129,7 +129,7 @@ const Products = () => {
           <div className=" flex-col">
             <div className=" bg-blue-300 h-80 m-3">
               <img
-                src="pro7.jpg"
+                src="Frame3.png"
                 className="w-full h-full object-cover"
                 alt="Product Image"
               />
@@ -137,14 +137,14 @@ const Products = () => {
             <div className="flex">
               <div className="bg-blue-100 w-[330px] h-[328px] m-3 relative">
                 <img
-                  src="pro7.jpg"
+                  src="Frame2.png"
                   className="w-full h-full object-cover"
                   alt="Product Image"
                 />
               </div>
               <div className=" bg-blue-500 w-[330px] h-[328px] m-3">
                 <img
-                  src="pro7.jpg"
+                  src="Frame4.png"
                   className="w-full h-full object-cover"
                   alt="Product Image"
                 />

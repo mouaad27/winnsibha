@@ -67,7 +67,7 @@ const Fav = () => {
   return (
     <CountContext.Provider value={count}>
       <div>
-        <Navbar />
+        
         <div className="flex ml-10 mt-20 mb-16">
           <div className=" align-middle mt-3 text-[#23414B] ml-20">
             <IoIosSquare />

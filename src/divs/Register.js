@@ -1,17 +1,44 @@
+import { RiAccountPinCircleLine } from "react-icons/ri";
+
 const Register = () => {
   return (
     <>
-      <div className="flex justify-between my-20">
-        <div className="flex"><div><img src="5.jpg " className="h-16 w-16 rounded-full mx-10"></img></div>
-        <div className="flex flex-col">
-        <div>alla</div>
-        <div>alla</div>
-        <div>alla</div>
+      <div className="text-left ml-20 flex  ">
+        <div>
+          <RiAccountPinCircleLine  className="w-12 h-12 text-[#23414B] mr-4"/>
         </div>
+        <div>
+          <h2 class="text-4xl font-bold mb-4 text-[#23414B]">
+            Manage My Account
+          </h2>
+        </div>
+      </div>
+      <div className="flex justify-between my-20">
+        <div className="flex">
+          <div className=" ">
+            <img
+              src="5.jpg "
+              className=" h-20 w-20 rounded-full mx-10 border ml-20 border-white border-solid border-[4px]"
+            ></img>
+          </div>
+          <div className="flex flex-col text-left">
+            <div className=" font-bold">Alaa Mohamed</div>
+            <div className=" text-xl">Product Design</div>
+            <div>Eastern European Time (EET), Cairo UTC +3</div>
+          </div>
         </div>
         <div className="flex">
-        <div> <button className=" bg-slate-700">ggggg</button></div>
-        <div><button className=" bg-red-600 mx-20">ggggg</button></div>
+          <div>
+            {" "}
+            <button className=" bg-slate-700 rounded-2xl h-12 w-52 border border-white border-solid border-[4px] font-bold text-white">
+              Upload New Photo{" "}
+            </button>
+          </div>
+          <div>
+            <button className=" bg-white mx-20 rounded-2xl h-12 w-52 ml-36 border border-[#23414B] border-solid border-[4px] font-bold text-[#23414B]">
+              Delete
+            </button>
+          </div>
         </div>
       </div>
 
@@ -160,13 +187,21 @@ const Register = () => {
               class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full h-4/5 shadow-sm sm:text-sm border-gray-300 rounded-md"
             />
           </div>
-
-          <button
-            type="submit"
-            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-md"
-          >
-            Submit
-          </button>
+          <div className="flex justify-end my-20 mr-12">
+            <div className="flex">
+              <div>
+                {" "}
+                <button className=" bg-slate-700 rounded-2xl h-12 w-52 border border-white border-solid border-[3px] font-bold text-white">
+                  Cancel{" "}
+                </button>
+              </div>
+              <div>
+                <button className=" bg-white mx-10 rounded-2xl h-12 w-52 ml-20 border border-[#23414B] border-solid border-[3px] font-bold text-[#23414B]">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

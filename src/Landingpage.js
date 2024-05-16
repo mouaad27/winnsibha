@@ -103,7 +103,7 @@ function Landingpage() {
 
   return (
     <div className="App">
-      <Navbar color="bleu" backgroundStyle={backgroundStyle}></Navbar>
+      
       <div className="yyy  ">
         <Windowbar></Windowbar>
       </div>

@@ -27,12 +27,23 @@ import Signin from "./divs/Signin";
 import Fav from "./divs/Fav.js";
 import Products from "./divs/Products.js";
 import Register from "./divs/Register.js";
+import Reserve from "./divs/Reserve.js";
 import { CookiesProvider } from "react-cookie";
+import Services from "./divs/Services.js";
+import { useState } from "react";
 
 function App() {
+  const signedIn = localStorage.getItem("isSignedIn") ;
+ 
+  const [isSignedIn, setIsSignedIn] = useState(signedIn || false);
   return (
     <div className="App">
       <BrowserRouter>
+        <div>
+          {" "}
+          <Navbar isSignedIn={isSignedIn} />
+        </div>
+
         <Routes>
           <Route path="/" element={<Landingpage />} />
           <Route
@@ -45,10 +56,17 @@ function App() {
             element={<Showservices />}
           />
           <Route path="/Profil" element={<Profil />} />
-          <Route path="/Signin" element={<Signin />} />
+          <Route
+            path="/Signin"
+            element={
+              <Signin isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />
+            }
+          />
           <Route path="/Fav/:count?/" element={<Fav />} />
           <Route path="/Products" element={<Products />} />
           <Route path="/Register" element={<Register />} />
+          <Route path="/Reserve" element={<Reserve />} />
+          <Route path="/Services" element={<Services />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -61,7 +61,7 @@ const Showproduct = () => {
         rel="stylesheet"
       ></link>
       <div className="nav-pr">
-      <Navbar color="" > </Navbar>
+      
       </div>
       <div className="imagedesc">
         <div className="imagecontainer">
@@ -130,7 +130,7 @@ const Showproduct = () => {
             </div>
           </div>
           <div className="reserve">
-          <NavLink to={`/Register`}><AwesomeButton className="resvbut" type="primary">
+          <NavLink to={`/Reserve`}><AwesomeButton className="resvbut" type="primary">
               reserve
             </AwesomeButton>
         </NavLink>

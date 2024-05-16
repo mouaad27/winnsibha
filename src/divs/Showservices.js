@@ -55,7 +55,7 @@ const Showservices = () => {
         rel="stylesheet"
       ></link>
       <div className="nav-pr">
-        <Navbar> </Navbar>
+        
       </div>
       <div className="imagedesc container mx-auto mb-50 ">
         <div className="imagecontainer">

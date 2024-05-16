@@ -1,83 +1,59 @@
+import React, { useState } from "react";
 import Navbar from "./Navbar";
-import "../singup.css";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
-  Button,
-} from "@nextui-org/react";
-
 import { FaGoogle } from "react-icons/fa6";
-import {
-  BrowserRouter,
-  Router,
-  Route,
-  Link,
-  NavLink,
-  Routes,
-} from "react-router-dom";
-import { useState } from "react";
-import {
-  useCookies,
-  cookies,
-  setCookie,
-  removeCookie
-} from 'react-cookie';
+import { useCookies, setCookie } from "react-cookie";
+import { Navigate } from "react-router-dom"; // Import Redirect component
 
-const Signin = () => {
+const Signin = ({ isSignedIn, setIsSignedIn }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [cookies, setCookie, removeCookie] = useCookies(['user']);
+  const [, , setCookie] = useCookies(["access_token", "refresh_token"]);
 
-
-
-  let handleSubmit = async () => {
+  const handleSubmit = async () => {
     let data = {
       email: email,
       password: password,
     };
-    console.log(data)
-    const result = await fetch(
-      "http://127.0.0.1:8000/api/login",
 
-      {
-        method: "POST", // *GET, POST, PUT, DELETE, etc
-        body: JSON.stringify(data), // body data type must match "Content-Type" header
-            mode:"cors",
-        headers: {
-          // "Content-Type": "application/json",
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    let accessToken  =   result['access_token'];
-    let refreshToken =  result['refresh_token'];
-    setCookie("access_token",accessToken);
-    setCookie("refresh_token",refreshToken);
-    if(result.status == 201){
-      console.log("user logged in ");
+    const result = await fetch("http://127.0.0.1:8000/api/login", {
+      method: "POST",
+      body: JSON.stringify(data),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (result.status === 201) {
+      let accessToken = await result.json();
+      setCookie("access_token", accessToken);
+      setIsSignedIn(true);
+      localStorage.setItem("isSignedIn", true);
+    } else {
+      setIsSignedIn(false);
+      localStorage.setItem("isSignedIn", false);
+
+      console.log("Sign-in failed");
     }
-   else{
-     console.log('sorry');
-   } 
   };
+
+  if (isSignedIn) {
+    return <Navigate to="/" />;
+  }
+
   return (
     <div className="sign">
-      <Navbar></Navbar>
-
       <div className="singup">
-        <div className="singup-form ">
-          <link
-            href="https://fonts.googleapis.com/css?family=Inter"
-            rel="stylesheet"
-          ></link>
-          <link
-            href="https://fonts.googleapis.com/css?family=Jost"
-            rel="stylesheet"
-          ></link>
+        <div className="singup-form">
           <div className="caa">
+            <link
+              href="https://fonts.googleapis.com/css?family=Inter"
+              rel="stylesheet"
+            ></link>
+            <link
+              href="https://fonts.googleapis.com/css?family=Jost"
+              rel="stylesheet"
+            ></link>
             <h1 className="font-bold text-3xl mb-6">Create an account</h1>
           </div>
           <div className="as">
