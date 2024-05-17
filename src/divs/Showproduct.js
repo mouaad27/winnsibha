@@ -51,7 +51,7 @@ const Showproduct = () => {
   ];
 
   return (
-    <div className="Showproduct bg-[#23414B]">
+    <div className="Showproduct ">
       <link
         href="https://fonts.googleapis.com/css?family=Inter"
         rel="stylesheet"
@@ -147,7 +147,7 @@ const Showproduct = () => {
          <div className=" align-middle mt-3 text-[#E5DDD2] ml-20"><IoIosSquare /></div><div><p className=" text-3xl font ml-2 text-[#E5DDD2] font-semibold">Contact the owner</p></div>
       </div>
       <div className="flex justify-center">
-      <div className="w-full h-80  bg-[#4D6A77] flex  ">
+      <div className="w-full h-80  bg-[#f4ebdf] flex  ">
         <div>
           {" "}
           <img

@@ -1,13 +1,13 @@
 .contact-info{
     height: 490px;
     width: 250px;
-    background-color: #e5ddd2;
+    background-color: #B3BBBC;
     margin: 7px;
     border-radius: 12px;
     border: 2px solid gray;
 }
 .contact-form{
-    background-color: #e5ddd2;
+    background-color: #B3BBBC;
     height: 490px;
     width: 800px;
     margin: 7px;
@@ -29,7 +29,7 @@
     width: 235px;
     height: 47px;
     border-radius: 4px;
-    background-color: #d0cece;
+    background-color: #F5F5F5;
     border: 2px solid gray;
 }
 .forminputcom{
@@ -37,7 +37,7 @@
     width: 722px;
     margin-top: 20px ;
     border-radius: 4px;
-    background-color: #d0cece;
+    background-color: #F5F5F5;
     border: 2px solid gray;
     vertical-align: top;
     padding-bottom: 210px;

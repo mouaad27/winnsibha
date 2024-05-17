@@ -7,7 +7,7 @@ const ContactUs = () => {
      
       <div className="contact-info w-96 ">
         <span className="coninfo font-bold flex font-extrabold text-xl">
-          <div className="text-2xl bg-[#c5cecf] p-2 rounded-full">
+          <div className="text-2xl bg-[#E4DCD1] p-2 rounded-full">
             <BsTelephone />
           </div>{" "}
           <div className=" ml-7">WRITE TO US</div>
@@ -21,7 +21,7 @@ const ContactUs = () => {
 
         <hr></hr>
         <span className="coninfo font-bold flex font-extrabold text-xl  ">
-          <div className="text-3xl  bg-[#c5cecf] p-2 rounded-full">
+          <div className="text-3xl  bg-[#E4DCD1] p-2 rounded-full">
             <AiOutlineMail />
           </div>{" "}
           <div className=" ml-7">WRITE TO US</div>
